@@ -5,6 +5,7 @@ using TMPro;
 
 public class MissionUi : MonoBehaviour
 {
+    public int MissionIndex;
     public TMP_Text MissionName;
     public TMP_Text MissionState;
     public TMP_Text[] Objective;

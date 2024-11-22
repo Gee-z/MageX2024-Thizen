@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class MissionManager : MonoBehaviour
 {
@@ -19,36 +21,100 @@ public class MissionManager : MonoBehaviour
 
     public MissionStruct[] Mission;
     public List<int> missionTaken = new List<int>();
+    public List<int> missionCompleted = new List<int>();
     [Header("UI")]
-    public GameObject Container;
+    public GameObject ContainerOnprogress;
+    public GameObject ContainerCompleted;
     public GameObject MissionUIGo;
+    public GameObject EmptyWarning;
     public static MissionManager instance;
     void Awake()
     {
-        instance = this;
-        MissionUiSpawned.Add(MissionUIGo);
-        ShowMission();
-    }
-    private int MissionSpawned = 1;
-    public List<GameObject> MissionUiSpawned = new List<GameObject>();
-    //UI
-    void ShowMission()
-    {
-        for(int i = 0; i < MissionSpawned;i++)
+        if (instance == null)
         {
-            MissionUiSpawned[i].SetActive(true);
-            UpdateUi(MissionUiSpawned[i].GetComponent<MissionUi>(),i);
+            Debug.Log("Upadating isntances");
+            instance = this;  // Assign the first instance
+            DontDestroyOnLoad(gameObject);  // Make it persistent across scenes
         }
-        for(int i = MissionSpawned; i < missionTaken.Count;i++)
+        else
         {
-            GameObject  MissionGameObject = Instantiate(MissionUIGo, Vector3.zero, Quaternion.identity, Container.transform);
+            Destroy(gameObject);  // Destroy duplicate
+        }
+        EmptyWarning.SetActive(false);
+    }
+    public List<GameObject> MissionUiSpawned = new List<GameObject>();
+    public List<GameObject> CompletedMissionUiSpawned = new List<GameObject>();
+    public ScrollRect scrollRect;  
+
+    public void CloseAllMissionUi()
+    {
+        ContainerOnprogress.SetActive(false);
+        ContainerCompleted.SetActive(false);
+        EmptyWarning.SetActive(false);
+    }
+
+
+    // [ContextMenu("Show On Progress Mission")]
+    public void ShowMissionOnProgress()
+    {
+        CloseAllMissionUi();
+        ContainerOnprogress.SetActive(true);
+        scrollRect.content = ContainerOnprogress.GetComponent<RectTransform>();
+        if(missionTaken.Count-missionCompleted.Count == 0) SetWarningToParent(ContainerOnprogress);
+        for(int i = 0; i < MissionUiSpawned.Count;i++)
+        {
+            if(Mission[MissionUiSpawned[i].GetComponent<MissionUi>().MissionIndex].Completed)
+            {
+                missionCompleted.Add(MissionUiSpawned[i].GetComponent<MissionUi>().MissionIndex);
+                Destroy(MissionUiSpawned[i]);
+                MissionUiSpawned.RemoveAt(i);
+            }
+            else
+            {
+                UpdateUi(MissionUiSpawned[i].GetComponent<MissionUi>(),i);
+            }
+        }
+        for(int i = MissionUiSpawned.Count; i < missionTaken.Count-missionCompleted.Count;i++)
+        {
+            GameObject  MissionGameObject = Instantiate(MissionUIGo, Vector3.zero, Quaternion.identity, ContainerOnprogress.transform);
             MissionGameObject.GetComponent<RectTransform>().localPosition = Vector3.zero;
             UpdateUi(MissionGameObject.GetComponent<MissionUi>(),i);
-            MissionSpawned++;
+            MissionGameObject.GetComponent<MissionUi>().MissionIndex = missionTaken[i];
             MissionUiSpawned.Add(MissionGameObject);
         }
-        Container.GetComponent<SizeUpdater>().ChangeSize(missionTaken.Count);
+        ContainerOnprogress.GetComponent<SizeUpdater>().ChangeSize(missionTaken.Count-missionCompleted.Count);
     }
+
+
+    // [ContextMenu("Show Completed Mission")]
+    public void ShowMissionCompleted()
+    {
+        CloseAllMissionUi();
+        ContainerCompleted.SetActive(true);
+        scrollRect.content = ContainerCompleted.GetComponent<RectTransform>();
+        if(missionCompleted.Count == 0) SetWarningToParent(ContainerCompleted);
+        for(int i = 0; i < CompletedMissionUiSpawned.Count;i++)
+        {
+            UpdateUi(CompletedMissionUiSpawned[i].GetComponent<MissionUi>(),i);
+        }
+        for(int i = CompletedMissionUiSpawned.Count; i < missionCompleted.Count;i++)
+        {
+            GameObject  MissionGameObject = Instantiate(MissionUIGo, Vector3.zero, Quaternion.identity, ContainerCompleted.transform);
+            MissionGameObject.GetComponent<RectTransform>().localPosition = Vector3.zero;
+            UpdateUi(MissionGameObject.GetComponent<MissionUi>(),i);
+            MissionGameObject.GetComponent<MissionUi>().MissionIndex = missionCompleted[i];
+            CompletedMissionUiSpawned.Add(MissionGameObject);
+        }
+        ContainerCompleted.GetComponent<SizeUpdater>().ChangeSize(missionCompleted.Count);
+    }
+
+    void SetWarningToParent(GameObject parentObject)
+    {
+        EmptyWarning.transform.SetParent(parentObject.transform);
+        EmptyWarning.SetActive(true);
+    }
+
+
     void UpdateUi(MissionUi Target,int i)
     {
             Target.MissionName.text = Mission[i].MissionName;
@@ -70,10 +136,17 @@ public class MissionManager : MonoBehaviour
             }
     }
 
-
+    int C = 0;
+    [ContextMenu("Complete")]
+    void CompleteMission()
+    {
+        ObjectiveComplete(0,C);
+        ShowMissionOnProgress();
+        C++;
+    }
 
     //Objective Complete
-    void ObjectiveComplete(int MissionIndex,int ObjectiveIndex)
+    public void ObjectiveComplete(int MissionIndex,int ObjectiveIndex)
     {
         Mission[MissionIndex].objective[ObjectiveIndex] = true;
         if(CheckAllObjective(MissionIndex))

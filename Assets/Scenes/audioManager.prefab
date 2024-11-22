@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2566630557139113969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5121314292154247519}
+  - component: {fileID: 3004481236146739740}
+  m_Layer: 0
+  m_Name: audioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5121314292154247519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2566630557139113969}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 0.06, z: 0}
+  m_LocalScale: {x: 18.350775, y: 10.615863, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3004481236146739740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2566630557139113969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb696ac3b032dd4794b6b715c0bda7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
+  music:
+  - name: MainMenu
+    clip: {fileID: 8300000, guid: 6afddc1b17461fa4b9fc713b50fe7b62, type: 3}
+    loop: 1
+    Volume: 1
+    source: {fileID: 0}
+  - name: Hub
+    clip: {fileID: 8300000, guid: 750aa29bd8d93854591123abc7d6b780, type: 3}
+    loop: 1
+    Volume: 1
+    source: {fileID: 0}
+  - name: Overworld
+    clip: {fileID: 8300000, guid: 0488787f6e4f7224aa10899e6491cdef, type: 3}
+    loop: 1
+    Volume: 1
+    source: {fileID: 0}
+  - name: Underground
+    clip: {fileID: 8300000, guid: 558f62afb7ca3bc479335ed292c4aff6, type: 3}
+    loop: 1
+    Volume: 1
+    source: {fileID: 0}
+  sfx:
+  - name: 
+    clip: {fileID: 0}
+    loop: 0
+    Volume: 0
+    source: {fileID: 0}
+  fadeDuration: 6

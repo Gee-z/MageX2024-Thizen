@@ -29,6 +29,8 @@ public class MovementManager : MonoBehaviour
     public bool lockPlanetRotation = false;
     static public MovementManager instance;
     public float rotationSpeedDroneRotate = 5f;
+    public Animator anim;
+    private bool isMoving;
 
     void Start()
     {
@@ -38,77 +40,96 @@ public class MovementManager : MonoBehaviour
         PlanetRb.centerOfMass = new Vector2(0,0);
         DroneRecalled = true;
         Clickable = true;
+        if(MenuManager.instance.NewRotation)
+        {
+            MenuManager.instance.NewRotation = false;
+            PlanetRb.rotation = MenuManager.instance.SavedRotation;
+        }
     }
     private Vector2 movementInput;
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(!DialogueManager.instance.isDialogue && !FlowManager.instance.PlayingFlow)
         {
-            if(Clickable)
+            if(Input.GetKeyDown(KeyCode.E))
             {
-                
-                if(IsDroning)
+                if(Clickable)
                 {
-                    StartCoroutine(ResetDroning());
-                }
-                else 
-                {
-                    StartCoroutine(StartDroning());
-                }
-                DroneRb.velocity = new Vector2(0f, 0f);
-            }
-        }
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-           RecallDrone();
-        }
-        
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        movementInput = new Vector2(horizontalInput, verticalInput);
-        if(Clickable )
-        {
-            if(!IsDroning)
-            {
-                if(PlanetRb.freezeRotation)PlanetRb.freezeRotation  = false;
-                DroneRb.velocity = new Vector2(0f, 0f);
-                float angularVelocity = horizontalInput * rotationSpeed;
-                PlanetRb.angularVelocity = angularVelocity;
-                // Debug.Log(horizontalInput);
-                if(horizontalInput > 0) Player.transform.localScale  = new Vector3(Player.transform.localScale.x,1f,Player.transform.localScale.z);
-                else if(horizontalInput < 0) Player.transform.localScale = new Vector3(Player.transform.localScale.x,-1f,Player.transform.localScale.z);
-                if(DroneRecalled)
-                {
-                    float distance = Vector3.Distance(Drone.transform.position, DroneSlot.position);
-                    if (distance > 0.2f)
+                    
+                    if(IsDroning)
                     {
-                        // Debug.Log("To Far");
-                        Drone.transform.position = Vector3.Lerp(Drone.transform.position, DroneSlot.position, Time.deltaTime * 0.5f);
+                        StartCoroutine(ResetDroning());
                     }
-                    if(horizontalInput > 0) Drone.transform.localScale  = new Vector3(-1f,Drone.transform.localScale.y,Drone.transform.localScale.z);
-                    else if(horizontalInput < 0) Drone.transform.localScale = new Vector3(1f,Drone.transform.localScale.y,Drone.transform.localScale.z);
-                    DroneRb.rotation = PlayerRb.rotation + 90f;;
+                    else 
+                    {
+                        StartCoroutine(StartDroning());
+                    }
+                    DroneRb.velocity = new Vector2(0f, 0f);
+                    PlayerRb.velocity = new Vector2(0f, 0f);
                 }
             }
-            else if(lockPlanetRotation)
+            if(Input.GetKeyDown(KeyCode.Q))
             {
-                if(!PlanetRb.freezeRotation) PlanetRb.freezeRotation  = true;
-                Debug.Log("droning while locked");
-                DroneRb.velocity = new Vector2(horizontalInput * DroneSpeed, verticalInput * DroneSpeed);
-                FlipDrone(horizontalInput);
+            RecallDrone();
             }
-            else
+            
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            movementInput = new Vector2(horizontalInput, verticalInput);
+            if(Clickable )
             {
-                if(PlanetRb.freezeRotation) PlanetRb.freezeRotation  = false;
-                DroneRb.velocity = new Vector2(0f, verticalInput * DroneSpeed);
-                float angularVelocity = horizontalInput * rotationSpeed;
-                PlanetRb.angularVelocity = angularVelocity;
-                FlipDrone(horizontalInput);
+                if(!IsDroning)
+                {
+                    if(PlanetRb.freezeRotation)PlanetRb.freezeRotation  = false;
+                    DroneRb.velocity = new Vector2(0f, 0f);
+                    float angularVelocity = horizontalInput * rotationSpeed;
+                    PlanetRb.angularVelocity = angularVelocity;
+                    if(horizontalInput == 0)
+                        anim.SetBool("Running", false);
+                    else
+                        anim.SetBool("Running", true);
+                    // Debug.Log(horizontalInput);
+                    if(horizontalInput > 0) Player.transform.localScale  = new Vector3(Player.transform.localScale.x,1f,Player.transform.localScale.z);
+                    else if(horizontalInput < 0) Player.transform.localScale = new Vector3(Player.transform.localScale.x,-1f,Player.transform.localScale.z);
+                    if(DroneRecalled)
+                    {
+                        float distance = Vector3.Distance(Drone.transform.position, DroneSlot.position);
+                        if (distance > 0.2f)
+                        {
+                            // Debug.Log("To Far");
+                            Drone.transform.position = Vector3.Lerp(Drone.transform.position, DroneSlot.position, Time.deltaTime * 0.5f);
+                        }
+                        if(horizontalInput > 0) Drone.transform.localScale  = new Vector3(-1f,Drone.transform.localScale.y,Drone.transform.localScale.z);
+                        else if(horizontalInput < 0) Drone.transform.localScale = new Vector3(1f,Drone.transform.localScale.y,Drone.transform.localScale.z);
+                        DroneRb.rotation = PlayerRb.rotation + 90f;;
+                    }
+                }
+                else if(lockPlanetRotation)
+                {
+                    if(!PlanetRb.freezeRotation) PlanetRb.freezeRotation  = true;
+                    Debug.Log("droning while locked");
+                    DroneRb.velocity = new Vector2(horizontalInput * DroneSpeed, verticalInput * DroneSpeed);
+                    FlipDrone(horizontalInput);
+                }
+                else
+                {
+                    if(PlanetRb.freezeRotation) PlanetRb.freezeRotation  = false;
+                    DroneRb.velocity = new Vector2(0f, verticalInput * DroneSpeed);
+                    float angularVelocity = horizontalInput * rotationSpeed;
+                    PlanetRb.angularVelocity = angularVelocity;
+                    FlipDrone(horizontalInput);
+                }
+            }
+            if (IsDroning)
+            {
+                RotateBasedOnInput();
             }
         }
-        if (IsDroning)
+        else
         {
-            RotateBasedOnInput();
+            DroneRb.velocity = new Vector2(0f, 0f);    
+            PlanetRb.angularVelocity = 0;
+            PlanetRb.freezeRotation  = true;
         }
     }
     void FlipDrone(float horizontalInput)
@@ -136,7 +157,7 @@ public class MovementManager : MonoBehaviour
     }
     IEnumerator ResetDroning()
     {
-        Debug.Log("Reset Droning");
+        // Debug.Log("Reset Droning");
         PlanetRb.angularVelocity = 0;
 
         Clickable = false;
@@ -165,7 +186,7 @@ public class MovementManager : MonoBehaviour
     IEnumerator StartDroning()
     {
 
-        Debug.Log("Start Droning");
+        // Debug.Log("Start Droning");
 
         DroneRb.rotation = 0;
 

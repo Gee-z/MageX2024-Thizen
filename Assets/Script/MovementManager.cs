@@ -136,7 +136,6 @@ public class MovementManager : MonoBehaviour
     {
         if (horizontalInput > 0)
         {
-            // Face right by flipping X scale to -1 (your current flip logic)
             DroneFacingRight = true;
             Drone.transform.localScale = new Vector3(-1f, Drone.transform.localScale.y, Drone.transform.localScale.z);
         }

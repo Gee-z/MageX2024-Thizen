@@ -33,12 +33,12 @@ public class MissionManager : MonoBehaviour
         if (instance == null)
         {
             Debug.Log("Upadating isntances");
-            instance = this;  // Assign the first instance
-            DontDestroyOnLoad(gameObject);  // Make it persistent across scenes
+            instance = this;  
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
-            Destroy(gameObject);  // Destroy duplicate
+            Destroy(gameObject); 
         }
         EmptyWarning.SetActive(false);
     }

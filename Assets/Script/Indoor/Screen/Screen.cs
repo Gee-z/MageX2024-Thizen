@@ -30,10 +30,6 @@ public class Screen : MonoBehaviour
             DialogueManager.instance.StartDialog(14);
             myCoroutine = StartCoroutine(ShowPassword());
         }
-        else if(Input.ToLower() == "nigger" || Input.ToLower() == "nigga"|| Input.ToLower() == "black")
-        {
-            StartCoroutine(WrongPassword("You Racist Fuck"));
-        }
         else if(Input.ToLower() == "thizen")
         {
             DialogueManager.instance.StartDialog(15);

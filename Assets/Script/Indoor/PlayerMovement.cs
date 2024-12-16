@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Speed of the player
+    public float moveSpeed = 5f; 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!DialogueManager.instance.isDialogue)
         {
-            // Get input for movement
             if(PuzzleManager.instance != null)
             {
                 if(!PuzzleManager.instance.OpeningUi ) movement.x = Input.GetAxisRaw("Horizontal");
@@ -40,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
             else
                 anim.SetBool("Running", true);
 
-            // Flip sprite based on movement direction
             if (movement.x > 0)
             {
                 spriteRenderer.gameObject.transform.localScale = new Vector2(Normal,spriteRenderer.gameObject.transform.localScale.y);
@@ -56,9 +54,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        // Move the player
-        
-    }
 }

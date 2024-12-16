@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlowEndStart : MonoBehaviour
 {
-    public float rayDistance = 0f;      // Distance the ray will check
+    public float rayDistance = 0f;     
     public LayerMask layerMask;  
     public int Color;
     public bool isPortal = false;
@@ -22,7 +22,6 @@ public class FlowEndStart : MonoBehaviour
     {
         if(!FlowManager.instance.isChanging)
         {
-            Debug.Log("Balls");
             GetComponent<BoxCollider2D>().enabled = false;
             
         }

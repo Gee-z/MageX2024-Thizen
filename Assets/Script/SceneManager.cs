@@ -11,7 +11,7 @@ public class SceneManage : MonoBehaviour
         if(InventoryManager.instance.CheckItem(5))
         {
             InventoryManager.instance.UseItem(5);
-            MenuManager.instance.SavedRotation = MovementManager.instance.PlanetRb.rotation;
+            MenuManager.instance.SavedRotation = 19;
             MenuManager.instance.NewRotation = true;
             AudioManager.instance.ChangeMusic("Overworld","Underground");
             FadeTransition.instance.ChangeScene(2);

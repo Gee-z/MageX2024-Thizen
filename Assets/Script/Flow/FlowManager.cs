@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FlowManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class FlowManager : MonoBehaviour
     public GameObject[] Portal; 
     public GameObject flowGo; 
     public List<GameObject> SpawnedObject = new List<GameObject>();
+    public UnityEvent checkCompletion;
     public int Color;
     public bool isChanging = false;
     public bool CanChangeMore = false;
@@ -29,27 +31,21 @@ public class FlowManager : MonoBehaviour
     }
     void Update()
     {
-        // if (Input.GetMouseButtonDown(0) && isChanging)
-        // {
-        //     Color = 1;
-        // }
         if(Input.GetMouseButtonUp(0))
         {
             if(!isHoveringStartPoint && isChanging)
             {
                 isChanging = false;
                 Reset();
-                Counter --;
             }
             else if(isChanging)
             {
                 isChanging = false;
                 Color = -1;
-                Counter --;
             }
             CheckWin();
         }
-        if(Counter >=Target && Target >0)
+        if(Counter >= Target && Target >0)
         {
             Completed();
         }
@@ -73,20 +69,7 @@ public class FlowManager : MonoBehaviour
     void CheckWin()
     {
         Counter = 0;
-        for(int i=0;i<6;i++)
-        {
-            for (int j=0;j<6;j++)
-            {
-                if(Collumn[i].Row[j].StartingPoint)
-                {
-                    if(Collumn[i].Row[j].Color == Collumn[i].Row[j].StartColor)
-                    {
-                        Counter++;
-                    }
-                }
-            }
-        }
-        // Debug.Log(Counter);
+        checkCompletion.Invoke();
     }
     public GameObject Tutorial;
 

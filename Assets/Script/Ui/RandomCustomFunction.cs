@@ -8,6 +8,7 @@ public class RandomCustomFunction : MonoBehaviour
 {
     bool AlreadyPass = false;
     public GameObject Alex;
+    public GameObject Alex2;
     public bool HasInteracted = false;
     public void UseDrill()
     {
@@ -29,6 +30,7 @@ public class RandomCustomFunction : MonoBehaviour
     public void Delayed()
     {
         Alex.SetActive(true);
+        Alex2.SetActive(false);
         InventoryManager.instance.UseItem(4);
         DialogueManager.instance.StartDialog(8);
     }

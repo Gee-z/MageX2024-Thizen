@@ -19,6 +19,7 @@ public class BlockPiece : MonoBehaviour
 
     void OnMouseDown()
     {
+        Block.RenewPieceOrder(transform);
         Vector3 mousePosition = GetMouseWorldPosition();
         offset = transform.position - mousePosition;
         isDragging = true;

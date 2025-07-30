@@ -17,12 +17,12 @@ public class MovementManager : MonoBehaviour
     public Rigidbody2D PlayerRb;
     public Transform PlanetTrans;
     public Transform target;
-    public Transform Object; 
+    public Transform Object;
     public Transform DroneSlot;
     // public float rotationSpeed = 5f; // Speed of rotation
     private bool IsDroning;
-    private float savedRotationPlayer; 
-    private float savedRotationDrone; 
+    private float savedRotationPlayer;
+    private float savedRotationDrone;
     private bool DroneRecalled;
     private bool Clickable;
     private bool DroneFacingRight;
@@ -34,13 +34,14 @@ public class MovementManager : MonoBehaviour
 
     void Start()
     {
-        if(instance == null) {
+        if (instance == null)
+        {
             instance = this;
         }
-        PlanetRb.centerOfMass = new Vector2(0,0);
+        PlanetRb.centerOfMass = new Vector2(0, 0);
         DroneRecalled = true;
         Clickable = true;
-        if(MenuManager.instance.NewRotation)
+        if (MenuManager.instance.NewRotation)
         {
             MenuManager.instance.NewRotation = false;
             PlanetRb.rotation = MenuManager.instance.SavedRotation;
@@ -49,18 +50,18 @@ public class MovementManager : MonoBehaviour
     private Vector2 movementInput;
     void Update()
     {
-        if(!DialogueManager.instance.isDialogue && !FlowManager.instance.PlayingFlow)
+        if (!DialogueManager.instance.isDialogue && !FlowManager.instance.PlayingFlow)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if(Clickable)
+                if (Clickable)
                 {
-                    
-                    if(IsDroning)
+
+                    if (IsDroning)
                     {
                         StartCoroutine(ResetDroning());
                     }
-                    else 
+                    else
                     {
                         StartCoroutine(StartDroning());
                     }
@@ -68,30 +69,30 @@ public class MovementManager : MonoBehaviour
                     PlayerRb.velocity = new Vector2(0f, 0f);
                 }
             }
-            if(Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-            RecallDrone();
+                RecallDrone();
             }
-            
+
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
             movementInput = new Vector2(horizontalInput, verticalInput);
-            if(Clickable )
+            if (Clickable)
             {
-                if(!IsDroning)
+                if (!IsDroning)
                 {
-                    if(PlanetRb.freezeRotation)PlanetRb.freezeRotation  = false;
+                    if (PlanetRb.freezeRotation) PlanetRb.freezeRotation = false;
                     DroneRb.velocity = new Vector2(0f, 0f);
                     float angularVelocity = horizontalInput * rotationSpeed;
                     PlanetRb.angularVelocity = angularVelocity;
-                    if(horizontalInput == 0)
+                    if (horizontalInput == 0)
                         anim.SetBool("Running", false);
                     else
                         anim.SetBool("Running", true);
                     // Debug.Log(horizontalInput);
-                    if(horizontalInput > 0) Player.transform.localScale  = new Vector3(Player.transform.localScale.x,1f,Player.transform.localScale.z);
-                    else if(horizontalInput < 0) Player.transform.localScale = new Vector3(Player.transform.localScale.x,-1f,Player.transform.localScale.z);
-                    if(DroneRecalled)
+                    if (horizontalInput > 0) Player.transform.localScale = new Vector3(Player.transform.localScale.x, 1f, Player.transform.localScale.z);
+                    else if (horizontalInput < 0) Player.transform.localScale = new Vector3(Player.transform.localScale.x, -1f, Player.transform.localScale.z);
+                    if (DroneRecalled)
                     {
                         float distance = Vector3.Distance(Drone.transform.position, DroneSlot.position);
                         if (distance > 0.2f)
@@ -99,25 +100,25 @@ public class MovementManager : MonoBehaviour
                             // Debug.Log("To Far");
                             Drone.transform.position = Vector3.Lerp(Drone.transform.position, DroneSlot.position, Time.deltaTime * 0.5f);
                         }
-                        if(horizontalInput > 0) Drone.transform.localScale  = new Vector3(-1f,Drone.transform.localScale.y,Drone.transform.localScale.z);
-                        else if(horizontalInput < 0) Drone.transform.localScale = new Vector3(1f,Drone.transform.localScale.y,Drone.transform.localScale.z);
-                        DroneRb.rotation = PlayerRb.rotation + 90f;;
+                        if (horizontalInput > 0) Drone.transform.localScale = new Vector3(-1f, Drone.transform.localScale.y, Drone.transform.localScale.z);
+                        else if (horizontalInput < 0) Drone.transform.localScale = new Vector3(1f, Drone.transform.localScale.y, Drone.transform.localScale.z);
+                        DroneRb.rotation = PlayerRb.rotation + 90f; ;
                     }
                 }
-                else if(lockPlanetRotation)
+                else if (lockPlanetRotation)
                 {
-                    if(!PlanetRb.freezeRotation) PlanetRb.freezeRotation  = true;
+                    if (!PlanetRb.freezeRotation) PlanetRb.freezeRotation = true;
                     Debug.Log("droning while locked");
                     DroneRb.velocity = new Vector2(horizontalInput * DroneSpeed, verticalInput * DroneSpeed);
-                    FlipDrone(horizontalInput);
+                    // FlipDrone(horizontalInput);
                 }
                 else
                 {
-                    if(PlanetRb.freezeRotation) PlanetRb.freezeRotation  = false;
+                    if (PlanetRb.freezeRotation) PlanetRb.freezeRotation = false;
                     DroneRb.velocity = new Vector2(0f, verticalInput * DroneSpeed);
                     float angularVelocity = horizontalInput * rotationSpeed;
                     PlanetRb.angularVelocity = angularVelocity;
-                    FlipDrone(horizontalInput);
+                    // FlipDrone(horizontalInput);
                 }
             }
             if (IsDroning)
@@ -127,9 +128,9 @@ public class MovementManager : MonoBehaviour
         }
         else
         {
-            DroneRb.velocity = new Vector2(0f, 0f);    
+            DroneRb.velocity = new Vector2(0f, 0f);
             PlanetRb.angularVelocity = 0;
-            PlanetRb.freezeRotation  = true;
+            PlanetRb.freezeRotation = true;
         }
     }
     void FlipDrone(float horizontalInput)
@@ -147,7 +148,7 @@ public class MovementManager : MonoBehaviour
     }
     private void RecallDrone()
     {
-        if(!IsDroning)
+        if (!IsDroning)
         {
             DroneRecalled = true;
             Drone.transform.position = DroneSlot.position;
@@ -178,8 +179,8 @@ public class MovementManager : MonoBehaviour
         Player.GetComponent<Collider2D>().enabled = true;
         PlayerRb.isKinematic = false;
         PlayerRb.freezeRotation = false;
-        
-        IsDroning = !IsDroning; 
+
+        IsDroning = !IsDroning;
 
     }
     IEnumerator StartDroning()
@@ -196,15 +197,15 @@ public class MovementManager : MonoBehaviour
         Player.GetComponent<Collider2D>().enabled = false;
 
         PlayerRb.freezeRotation = true;
-    
+
         PlayerRb.isKinematic = true;
 
-        savedRotationPlayer = PlanetRb.rotation; 
+        savedRotationPlayer = PlanetRb.rotation;
 
         virtualCamera.Follow = Drone.transform;
 
         IsDroning = !IsDroning;
-        if(DroneRecalled)
+        if (DroneRecalled)
         {
             DroneRecalled = false;
         }
@@ -216,15 +217,15 @@ public class MovementManager : MonoBehaviour
         DroneRb.isKinematic = false;
         Clickable = true;
 
-        
+
     }
     public void LockRotation()
     {
         lockPlanetRotation = true;
         PlanetRb.angularVelocity = 0;
-        
+
         DroneRb.constraints = RigidbodyConstraints2D.None;
-        DroneRb.freezeRotation  = true;
+        DroneRb.freezeRotation = true;
     }
     public void UnlockRotation()
     {
@@ -232,37 +233,32 @@ public class MovementManager : MonoBehaviour
         PlanetRb.angularVelocity = 0;
 
         DroneRb.constraints = RigidbodyConstraints2D.FreezePositionX;
-        DroneRb.freezeRotation  = true;
+        DroneRb.freezeRotation = true;
     }
     void RotateBasedOnInput()
     {
-        // Debug.Log("x : " + movementInput.x + "y : " + movementInput.y  );
-        if(movementInput.x == 0 && movementInput.y == 0)
+        float directionSign = Mathf.Sign(Drone.transform.localScale.x);
+
+        if (movementInput.x == 0 && movementInput.y == 0)
         {
-            // if(DroneFacingRight)
-            // {
-                float angle = Mathf.Atan2(0f, 1f) * Mathf.Rad2Deg;
-
-                Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
-
-                Drone.transform.rotation = Quaternion.Slerp(Drone.transform.rotation, targetRotation, rotationSpeedDroneRotate * Time.deltaTime);
-            // }
-        }
-        else if (DroneFacingRight)
-        {
-            float angle = Mathf.Atan2(movementInput.y, movementInput.x) * Mathf.Rad2Deg;
-
+            float angle = 0f;
             Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
-
             Drone.transform.rotation = Quaternion.Slerp(Drone.transform.rotation, targetRotation, rotationSpeedDroneRotate * Time.deltaTime);
         }
         else
         {
-            float angle = Mathf.Atan2(-movementInput.y, -movementInput.x) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(movementInput.y, movementInput.x) * Mathf.Rad2Deg;
 
+            // if (directionSign < 0)
+            // {
+            // }
+            if(Drone.transform.localScale.x > 0)
+                angle += 180f;
+    
             Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
-
             Drone.transform.rotation = Quaternion.Slerp(Drone.transform.rotation, targetRotation, rotationSpeedDroneRotate * Time.deltaTime);
         }
     }
+
+
 }

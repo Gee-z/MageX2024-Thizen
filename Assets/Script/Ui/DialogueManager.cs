@@ -61,14 +61,19 @@ public class DialogueManager : MonoBehaviour
     {
         if(InventoryManager.instance != null)
         {
-            if((InventoryManager.instance.CheckItem(1)&&InventoryManager.instance.CheckItem(2)&&InventoryManager.instance.CheckItem(3)) || InventoryManager.instance.CheckItem(4))
+            if ((InventoryManager.instance.CheckItem(1) && InventoryManager.instance.CheckItem(2) && InventoryManager.instance.CheckItem(3)) || InventoryManager.instance.CheckItem(4))
             {
+                
             }
-            else if(!isatHUb && InventoryManager.instance.Start)
-            StartDialog(0);
+            else if (!isatHUb && InventoryManager.instance.Start)
+            {
+                if(dialogueState.instance.CheckVarUpdate("First Time Start"))
+                    StartDialog(0);
+            }
         }
         else if(!isIntroScene)
         {
+            Debug.Log("Starting Dialogue");
             StartDialog(0);
         }
     }

@@ -25,6 +25,24 @@ public class FlowPiece : MonoBehaviour
     {
         Renderer = GetComponent<SpriteRenderer>();
     }
+    void Start()
+    {
+        FlowManager.instance.checkCompletion.AddListener(Check);
+    }
+    void ODisable()
+    {
+         FlowManager.instance.checkCompletion.RemoveListener(Check);
+    }
+    public void Check()
+    {
+        if (StartingPoint)
+        {
+            if (Color == StartColor)
+                FlowManager.instance.Counter++;
+            else
+                FlowManager.instance.Counter--;
+        }
+    }
     public void MakeStarter(int colorCode)
     {
         isEmpty = true;

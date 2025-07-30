@@ -3328,7 +3328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[16].dialog.Array.data[0].sentences
-      value: A bit overpriced, tapi Ada DIMAS ukin
+      value: A bit overpriced innit
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[17].dialog.Array.data[0].sentences

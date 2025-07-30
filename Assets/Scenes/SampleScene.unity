@@ -2535,7 +2535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &326867942
 Rigidbody2D:
   serializedVersion: 4
@@ -13549,7 +13549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1628624825
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18625,13 +18625,13 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1245840531}
   - {fileID: 1970353558}
   - {fileID: 45221394}
   - {fileID: 519420032}
   - {fileID: 2003385501}
   - {fileID: 18220913}
   - {fileID: 1568109750}
-  - {fileID: 1245840531}
   - {fileID: 982700174}
   - {fileID: 2058771639}
   - {fileID: 114752025}

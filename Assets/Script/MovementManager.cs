@@ -46,6 +46,8 @@ public class MovementManager : MonoBehaviour
             MenuManager.instance.NewRotation = false;
             PlanetRb.rotation = MenuManager.instance.SavedRotation;
         }
+        Player.SetActive(true);
+        Drone.SetActive(true);
     }
     private Vector2 movementInput;
     void Update()

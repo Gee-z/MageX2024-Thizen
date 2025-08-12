@@ -14615,10 +14615,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Portal Clue :'
+  m_text: "\uD3EC\uD138 \uB2E8\uC11C :"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 667e71cf0faa1814993d07bf59b043a8, type: 2}
-  m_sharedMaterial: {fileID: -7236234052818982853, guid: 667e71cf0faa1814993d07bf59b043a8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8bc70a7fb0cb92b48b941fe933c318e8, type: 2}
+  m_sharedMaterial: {fileID: -8448512007595331710, guid: 8bc70a7fb0cb92b48b941fe933c318e8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14678,10 +14678,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -59.292267, y: 0, z: -52.704254, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1760187179

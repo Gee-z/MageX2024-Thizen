@@ -50,111 +50,127 @@ MonoBehaviour:
   DialogueArray:
   - dialog:
     - name: Alex
-      sentences: Help! Is anyone there? Please help!
+      sentences: "\uB3C4\uC640\uC8FC\uC138\uC694! \uAC70\uAE30 \uB204\uAD6C \uC5C6\uC5B4\uC694?
+        \uB3C4\uC640\uC8FC\uC138\uC694!"
       Right: 0
       SpriteIndex: 2
     - name: Nic
-      sentences: Did you hear that? Sounds like someone's in trouble. It's coming
-        from the left, We need to check it out!
+      sentences: "\uB4E4\uC73C\uC168\uB098\uC694? \uB204\uAD70\uAC00 \uACE4\uACBD\uC5D0
+        \uCC98\uD55C \uAC83 \uAC19\uB124\uC694. \uC67C\uCABD\uC5D0\uC11C \uB4E4\uB824\uC694,
+        \uD655\uC778\uD574\uC57C \uD574\uC694!"
       Right: 1
       SpriteIndex: 1
     charSpeak: 0200000001000000
   - dialog:
     - name: Alex
-      sentences: "Hello? Is anyone there? I can\u2019t feel my joints!"
+      sentences: "\uC5EC\uBCF4\uC138\uC694? \uAC70\uAE30 \uB204\uAD6C \uC788\uC5B4\uC694?
+        \uAD00\uC808\uC5D0 \uAC10\uAC01\uC774 \uC5C6\uC5B4\uC694!"
       Right: 0
       SpriteIndex: 2
     - name: Nic
-      sentences: "Aria, we still need a drill to clear these scraps, let\u2019s come
-        back later with one"
+      sentences: "\uC544\uB9AC\uC544, \uC774 \uCC0C\uAEBC\uAE30\uB97C \uCE58\uC6B0\uB824\uBA74
+        \uB4DC\uB9B4\uC774 \uD544\uC694\uD574 \uB098\uC911\uC5D0 \uAC00\uC838\uC640\uC57C
+        \uD574"
       Right: 1
       SpriteIndex: 1
     - name: Aria
-      sentences: "Sorry Alex, we\u2019ll be right back!"
+      sentences: "\uC8C4\uC1A1\uD574\uC694 \uC54C\uB809\uC2A4, \uACE7 \uB3CC\uC544\uC62C\uAC8C\uC694!"
       Right: 0
       SpriteIndex: 0
     charSpeak: 0200000001000000
   - dialog:
     - name: Alex
-      sentences: Oh, thank the stars! I'm Alex. I was scavenging for parts when this
-        heap of scrap collapsed on me. I can't move a servo. Please, can you help
-        me out?
+      sentences: "\uC624, \uBCC4\uB4E4\uC5D0\uAC8C \uAC10\uC0AC\uD569\uB2C8\uB2E4!
+        \uC804 \uC54C\uB809\uC2A4\uC608\uC694. \uBD80\uD488\uC744 \uCC3E\uB2E4\uAC00
+        \uC774 \uACE0\uCCA0 \uB354\uBBF8\uAC00 \uBB34\uB108\uC838 \uB0B4\uB838\uC5B4\uC694.
+        \uC11C\uBCF4\uB97C \uC6C0\uC9C1\uC77C \uC218\uAC00 \uC5C6\uC5B4\uC694. \uC81C\uBC1C
+        \uB3C4\uC640\uC8FC\uC2E4 \uC218 \uC788\uB098\uC694?"
       Right: 1
       SpriteIndex: 2
     - name: Aria
-      sentences: "Oh my, that\u2019s horrible! Hang tight, Alex. We\u2019ll help
-        you get out of there. "
+      sentences: "\uC138\uC0C1\uC5D0, \uB054\uCC0D\uD558\uB124\uC694! \uAF49 \uC7A1\uC544,
+        \uC54C\uB809\uC2A4. \uC6B0\uB9AC\uAC00 \uB3C4\uC640\uC904\uAC8C\uC694."
       Right: 0
       SpriteIndex: 0
     - name: Nic
-      sentences: "Aria, you\u2019re not going to do anything with your hands, it
-        looks like we'll need a drill to clear this mess. We probably can find some
-        parts underground."
+      sentences: "\uC544\uB9AC\uC544, \uC190\uC73C\uB85C\uB294 \uC544\uBB34\uAC83\uB3C4
+        \uD560 \uC218 \uC5C6\uC73C\uB2C8 \uB4DC\uB9B4\uC774 \uD544\uC694\uD574. \uC774
+        \uB09C\uC7A5\uD310\uC744 \uCE58\uC6B0\uB824\uBA74 \uB4DC\uB9B4\uC774 \uD544\uC694\uD560
+        \uAC83 \uAC19\uC544. \uC9C0\uD558\uC5D0 \uBD80\uD488\uC744 \uCC3E\uC744 \uC218
+        \uC788\uC744 \uAC70\uC57C"
       Right: 1
       SpriteIndex: 1
     - name: Aria
-      sentences: "Ah you\u2019re probably right\u2026 We\u2019ll come back as fast
-        as we can Alex! Cmon Nic, Let\u2019s hurry."
+      sentences: "\uC544, \uB124 \uB9D0\uC774 \uB9DE\uC544... \uCD5C\uB300\uD55C
+        \uBE68\uB9AC \uB3CC\uC544\uC62C\uAC8C \uC54C\uB809\uC2A4! \uB2C9, \uC11C\uB458\uB7EC!"
       Right: 0
       SpriteIndex: 0
     charSpeak: 0100000002000000
   - dialog:
     - name: Aria
-      sentences: "Nope no luck here, lift\u2019s completely stuck, seems like its
-        out of power."
+      sentences: "\uC544\uB2C8\uC694, \uB9AC\uD504\uD2B8\uAC00 \uC644\uC804\uD788
+        \uBA48\uCDC4\uC2B5\uB2C8\uB2E4. \uC804\uC6D0\uC774 \uB098\uAC04 \uAC83 \uAC19\uC2B5\uB2C8\uB2E4."
       Right: 0
       SpriteIndex: 0
     - name: Nic
-      sentences: Figures. There might be some spare batteries around, probably in
-        that huge dome right there. That used to be an emergency storage area
+      sentences: "\uD53C\uADDC\uC5B4. \uC800\uAE30 \uC800 \uCEE4\uB2E4\uB780 \uB3D4
+        \uC548\uC5D0 \uC5EC\uBD84\uC758 \uBC30\uD130\uB9AC\uAC00 \uC788\uC744\uC9C0\uB3C4
+        \uBAB0\uB77C\uC694. \uC800\uAE30\uAC00 \uBE44\uC0C1\uC6A9 \uBCF4\uAD00\uC18C\uC600\uC5B4\uC694"
       Right: 1
       SpriteIndex: 1
     charSpeak: 0000000001000000
   - dialog:
     - name: Aria
-      sentences: Was this place always this small inside? No way im going to fit
-        through this hole. I think this is more of your field, Nic
+      sentences: "\uC5EC\uAE30\uAC00 \uC6D0\uB798 \uC774\uB807\uAC8C \uC791\uC558\uB098\uC694?
+        \uC774 \uAD6C\uBA4D\uC744 \uD1B5\uACFC\uD560 \uBC29\uBC95\uC774 \uC5C6\uC5B4.
+        \uC5EC\uAE30\uAC00 \uB124 \uBD84\uC57C\uC778 \uAC83 \uAC19\uC544, \uB2C9"
       Right: 0
       SpriteIndex: 0
     - name: Nic
-      sentences: ' Hehe, What will you do without me? No worries, I''ll go in and
-        check it out. Let''s hope there''s still a battery left in there. Wait here,
-        I''ll let you know if I need backup.'
+      sentences: " \uB098 \uC5C6\uC73C\uBA74 \uC5B4\uB5BB\uAC8C \uD560 \uAC74\uB370?
+        \uAC71\uC815 \uB9C8\uC138\uC694, \uC81C\uAC00 \uB4E4\uC5B4\uAC00\uC11C \uD655\uC778\uD574
+        \uBCFC\uAC8C\uC694. \uC544\uC9C1 \uBC30\uD130\uB9AC\uAC00 \uB0A8\uC544\uC788\uAE38
+        \uBC14\uB77C\uC790\uACE0\uC694. \uC5EC\uAE30\uC11C \uAE30\uB2E4\uB9AC\uC138\uC694.
+        \uC9C0\uC6D0\uC774 \uD544\uC694\uD558\uBA74 \uC54C\uB824\uB4DC\uB9B4\uAC8C\uC694."
       Right: 1
       SpriteIndex: 1
     - name: Aria
-      sentences: Good luck! Oh, and dont bump your head!
+      sentences: "\uD589\uC6B4\uC744 \uBE55\uB2C8\uB2E4! \uADF8\uB9AC\uACE0 \uBA38\uB9AC
+        \uBD80\uB52A\uD788\uC9C0 \uB9C8\uC138\uC694!"
       Right: 0
       SpriteIndex: 0
     charSpeak: 0000000001000000
   - dialog:
     - name: Nic
-      sentences: Jackpot!
+      sentences: "\uC7AD\uD31F!"
       Right: 0
       SpriteIndex: 1
     - name: Aria
-      sentences: "Sweet! You got it! Let\u2019s hurry."
+      sentences: "\uBA4B\uC9C0\uB124\uC694! \uB410\uC5B4\uC694! \uC11C\uB458\uB7EC\uC694."
       Right: 1
       SpriteIndex: 0
     charSpeak: 0100000000000000
   - dialog:
     - name: Aria
-      sentences: The bridge ahead isn't lowered. It looks like it should be controlled
-        by that panel. Can you go to the other side and help access it, Nic?
+      sentences: "\uC804\uBC29 \uB2E4\uB9AC\uAC00 \uB0B4\uB824\uC624\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+        \uC800 \uD328\uB110\uB85C \uC81C\uC5B4\uD574\uC57C \uD560 \uAC83 \uAC19\uC740\uB370\uC694.
+        \uBC18\uB300\uD3B8\uC73C\uB85C \uAC00\uC11C \uC811\uADFC\uC744 \uB3C4\uC640\uC904
+        \uC218 \uC788\uACA0\uB098, \uB2C9?"
       Right: 0
       SpriteIndex: 0
     - name: Nic
-      sentences: "Sure thing, I\u2019ll see what I can do."
+      sentences: "\uADF8\uB7FC\uC694, \uC81C\uAC00 \uD560 \uC218 \uC788\uB294 \uBC29\uBC95\uC744
+        \uCC3E\uC544\uBCF4\uACA0\uC2B5\uB2C8\uB2E4."
       Right: 1
       SpriteIndex: 1
     charSpeak: 0000000001000000
   - dialog:
     - name: Nic
-      sentences: "Theres nothing the great Nic can\u2019t do!"
+      sentences: "\uC704\uB300\uD55C \uB2C9\uC774 \uBABB \uD560 \uC77C\uC740 \uC5C6\uC2B5\uB2C8\uB2E4!"
       Right: 1
       SpriteIndex: 1
     - name: Aria
-      sentences: "Good job, Nic. Let\u2019s go"
+      sentences: "\uC798\uD588\uC5B4, \uB2C9. \uAC00\uC790"
       Right: 0
       SpriteIndex: 0
     charSpeak: 0000000001000000
@@ -169,6 +185,12 @@ MonoBehaviour:
   ClickToContinue: {fileID: 952592042826057086}
   DialogueGo: {fileID: 2810322200206595549}
   isDialogue: 0
+  isatHUb: 0
+  isIntroScene: 0
+  Square: {fileID: 0}
+  Square2: {fileID: 0}
+  FinalDialogue: 0
+  ToBeContinued: {fileID: 0}
 --- !u!1 &792510913161773816
 GameObject:
   m_ObjectHideFlags: 0

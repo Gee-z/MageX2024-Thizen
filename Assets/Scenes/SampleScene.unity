@@ -9360,11 +9360,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTrigered: 0
---- !u!1 &1023724465 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1846597191487117045, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
-  m_PrefabInstance: {fileID: 2662073740024753109}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1053423170
 GameObject:
   m_ObjectHideFlags: 0
@@ -17076,12 +17071,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mission:
-  - MissionName: Explore The Planet
+  - MissionName: "\uD589\uC131\uC744 \uD0D0\uD5D8\uD558\uC138\uC694"
     ObjectiveCount: 3
     ObjectiveDetail:
-    - Get Across The bridge
-    - Find a way to fix the elvator
-    - Get to the basement
+    - "\uB2E4\uB9AC\uB97C \uAC74\uB108\uC138\uC694"
+    - "\uC5D8\uB9AC\uBCA0\uC774\uD130\uB97C \uACE0\uCE58\uB294 \uBC29\uBC95\uC744
+      \uCC3E\uC544\uBCF4\uC138\uC694."
+    - "\uC9C0\uD558\uB85C \uAC00\uC138\uC694."
     objective: 000000
     Completed: 0
   missionTaken: 00000000
@@ -18032,6 +18028,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 450989093868117532, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: m_fontSize
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 450989093868117532, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8bc70a7fb0cb92b48b941fe933c318e8, type: 2}
+    - target: {fileID: 450989093868117532, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 450989093868117532, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1293993278219136821, guid: 0606d4658c4819546b6d2520024dd970, type: 2}
+    - target: {fileID: 450989093868117532, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 792510913161773816, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -18052,21 +18068,65 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4180876188720588066, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: m_text
+      value: "\uACC4\uC18D\uD558\uB824\uBA74 \uD074\uB9AD\uD558\uC138\uC694..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180876188720588066, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180876188720588066, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8bc70a7fb0cb92b48b941fe933c318e8, type: 2}
+    - target: {fileID: 4180876188720588066, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4180876188720588066, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: Square
       value: 
-      objectReference: {fileID: 1023724465}
+      objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: Square2
       value: 
-      objectReference: {fileID: 61059925}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueGo
+      value: 
+      objectReference: {fileID: 2662073740024753115}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: NameDisplay
+      value: 
+      objectReference: {fileID: 2662073740024753110}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: LeftRenderer
+      value: 
+      objectReference: {fileID: 2662073740024753114}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2662073740024753112}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: RightRenderer
+      value: 
+      objectReference: {fileID: 2662073740024753113}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: ToBeContinued
       value: 
-      objectReference: {fileID: 2076525497}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: ClickToContinue
+      value: 
+      objectReference: {fileID: 2662073740024753111}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.size
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.size
@@ -18315,6 +18375,116 @@ PrefabInstance:
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[13].Right
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[0].dialog.Array.data[0].sentences
+      value: "\uB3C4\uC640\uC8FC\uC138\uC694! \uAC70\uAE30 \uB204\uAD6C \uC5C6\uC5B4\uC694?
+        \uB3C4\uC640\uC8FC\uC138\uC694!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[0].dialog.Array.data[1].sentences
+      value: "\uB4E4\uC73C\uC168\uB098\uC694? \uB204\uAD70\uAC00 \uACE4\uACBD\uC5D0
+        \uCC98\uD55C \uAC83 \uAC19\uB124\uC694. \uC67C\uCABD\uC5D0\uC11C \uB4E4\uB824\uC694,
+        \uD655\uC778\uD574\uC57C \uD574\uC694!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[1].dialog.Array.data[0].sentences
+      value: "\uC5EC\uBCF4\uC138\uC694? \uAC70\uAE30 \uB204\uAD6C \uC788\uC5B4\uC694?
+        \uAD00\uC808\uC5D0 \uAC10\uAC01\uC774 \uC5C6\uC5B4\uC694!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[1].dialog.Array.data[1].sentences
+      value: "\uC544\uB9AC\uC544, \uC774 \uCC0C\uAEBC\uAE30\uB97C \uCE58\uC6B0\uB824\uBA74
+        \uB4DC\uB9B4\uC774 \uD544\uC694\uD574 \uB098\uC911\uC5D0 \uAC00\uC838\uC640\uC57C
+        \uD574"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[1].dialog.Array.data[2].sentences
+      value: "\uC8C4\uC1A1\uD574\uC694 \uC54C\uB809\uC2A4, \uACE7 \uB3CC\uC544\uC62C\uAC8C\uC694!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[2].dialog.Array.data[0].sentences
+      value: "\uC624, \uBCC4\uB4E4\uC5D0\uAC8C \uAC10\uC0AC\uD569\uB2C8\uB2E4! \uC804
+        \uC54C\uB809\uC2A4\uC608\uC694. \uBD80\uD488\uC744 \uCC3E\uB2E4\uAC00 \uC774
+        \uACE0\uCCA0 \uB354\uBBF8\uAC00 \uBB34\uB108\uC838 \uB0B4\uB838\uC5B4\uC694.
+        \uC11C\uBCF4\uB97C \uC6C0\uC9C1\uC77C \uC218\uAC00 \uC5C6\uC5B4\uC694. \uC81C\uBC1C
+        \uB3C4\uC640\uC8FC\uC2E4 \uC218 \uC788\uB098\uC694?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[2].dialog.Array.data[1].sentences
+      value: "\uC138\uC0C1\uC5D0, \uB054\uCC0D\uD558\uB124\uC694! \uAF49 \uC7A1\uC544,
+        \uC54C\uB809\uC2A4. \uC6B0\uB9AC\uAC00 \uB3C4\uC640\uC904\uAC8C\uC694."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[2].dialog.Array.data[2].sentences
+      value: "\uC544\uB9AC\uC544, \uC190\uC73C\uB85C\uB294 \uC544\uBB34\uAC83\uB3C4
+        \uD560 \uC218 \uC5C6\uC73C\uB2C8 \uB4DC\uB9B4\uC774 \uD544\uC694\uD574. \uC774
+        \uB09C\uC7A5\uD310\uC744 \uCE58\uC6B0\uB824\uBA74 \uB4DC\uB9B4\uC774 \uD544\uC694\uD560
+        \uAC83 \uAC19\uC544. \uC9C0\uD558\uC5D0 \uBD80\uD488\uC744 \uCC3E\uC744 \uC218
+        \uC788\uC744 \uAC70\uC57C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[2].dialog.Array.data[3].sentences
+      value: "\uC544, \uB124 \uB9D0\uC774 \uB9DE\uC544... \uCD5C\uB300\uD55C \uBE68\uB9AC
+        \uB3CC\uC544\uC62C\uAC8C \uC54C\uB809\uC2A4! \uB2C9, \uC11C\uB458\uB7EC!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[3].dialog.Array.data[0].sentences
+      value: "\uC544\uB2C8\uC694, \uB9AC\uD504\uD2B8\uAC00 \uC644\uC804\uD788 \uBA48\uCDC4\uC2B5\uB2C8\uB2E4.
+        \uC804\uC6D0\uC774 \uB098\uAC04 \uAC83 \uAC19\uC2B5\uB2C8\uB2E4."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[3].dialog.Array.data[1].sentences
+      value: "\uD53C\uADDC\uC5B4. \uC800\uAE30 \uC800 \uCEE4\uB2E4\uB780 \uB3D4 \uC548\uC5D0
+        \uC5EC\uBD84\uC758 \uBC30\uD130\uB9AC\uAC00 \uC788\uC744\uC9C0\uB3C4 \uBAB0\uB77C\uC694.
+        \uC800\uAE30\uAC00 \uBE44\uC0C1\uC6A9 \uBCF4\uAD00\uC18C\uC600\uC5B4\uC694"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[4].dialog.Array.data[0].sentences
+      value: "\uC5EC\uAE30\uAC00 \uC6D0\uB798 \uC774\uB807\uAC8C \uC791\uC558\uB098\uC694?
+        \uC774 \uAD6C\uBA4D\uC744 \uD1B5\uACFC\uD560 \uBC29\uBC95\uC774 \uC5C6\uC5B4.
+        \uC5EC\uAE30\uAC00 \uB124 \uBD84\uC57C\uC778 \uAC83 \uAC19\uC544, \uB2C9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[4].dialog.Array.data[1].sentences
+      value: " \uB098 \uC5C6\uC73C\uBA74 \uC5B4\uB5BB\uAC8C \uD560 \uAC74\uB370?
+        \uAC71\uC815 \uB9C8\uC138\uC694, \uC81C\uAC00 \uB4E4\uC5B4\uAC00\uC11C \uD655\uC778\uD574
+        \uBCFC\uAC8C\uC694. \uC544\uC9C1 \uBC30\uD130\uB9AC\uAC00 \uB0A8\uC544\uC788\uAE38
+        \uBC14\uB77C\uC790\uACE0\uC694. \uC5EC\uAE30\uC11C \uAE30\uB2E4\uB9AC\uC138\uC694.
+        \uC9C0\uC6D0\uC774 \uD544\uC694\uD558\uBA74 \uC54C\uB824\uB4DC\uB9B4\uAC8C\uC694."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[4].dialog.Array.data[2].sentences
+      value: "\uD589\uC6B4\uC744 \uBE55\uB2C8\uB2E4! \uADF8\uB9AC\uACE0 \uBA38\uB9AC
+        \uBD80\uB52A\uD788\uC9C0 \uB9C8\uC138\uC694!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[5].dialog.Array.data[0].sentences
+      value: "\uC7AD\uD31F!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[5].dialog.Array.data[1].sentences
+      value: "\uBA4B\uC9C0\uB124\uC694! \uB410\uC5B4\uC694! \uC11C\uB458\uB7EC\uC694."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[6].dialog.Array.data[0].sentences
+      value: "\uC804\uBC29 \uB2E4\uB9AC\uAC00 \uB0B4\uB824\uC624\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.
+        \uC800 \uD328\uB110\uB85C \uC81C\uC5B4\uD574\uC57C \uD560 \uAC83 \uAC19\uC740\uB370\uC694.
+        \uBC18\uB300\uD3B8\uC73C\uB85C \uAC00\uC11C \uC811\uADFC\uC744 \uB3C4\uC640\uC904
+        \uC218 \uC788\uACA0\uB098, \uB2C9?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[6].dialog.Array.data[1].sentences
+      value: "\uADF8\uB7FC\uC694, \uC81C\uAC00 \uD560 \uC218 \uC788\uB294 \uBC29\uBC95\uC744
+        \uCC3E\uC544\uBCF4\uACA0\uC2B5\uB2C8\uB2E4."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[7].dialog.Array.data[0].sentences
+      value: "\uC704\uB300\uD55C \uB2C9\uC774 \uBABB \uD560 \uC77C\uC740 \uC5C6\uC2B5\uB2C8\uB2E4!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+      propertyPath: DialogueArray.Array.data[7].dialog.Array.data[1].sentences
+      value: "\uC798\uD588\uC5B4, \uB2C9. \uAC00\uC790"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[0].sentences
@@ -18621,6 +18791,48 @@ PrefabInstance:
       addedObject: {fileID: 61059926}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+--- !u!114 &2662073740024753110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5208226843714249072, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+  m_PrefabInstance: {fileID: 2662073740024753109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2662073740024753111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 952592042826057086, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+  m_PrefabInstance: {fileID: 2662073740024753109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2662073740024753112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 450989093868117532, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+  m_PrefabInstance: {fileID: 2662073740024753109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &2662073740024753113 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 872407164653875291, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+  m_PrefabInstance: {fileID: 2662073740024753109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2662073740024753114 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1530453141702571099, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+  m_PrefabInstance: {fileID: 2662073740024753109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2662073740024753115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2810322200206595549, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
+  m_PrefabInstance: {fileID: 2662073740024753109}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

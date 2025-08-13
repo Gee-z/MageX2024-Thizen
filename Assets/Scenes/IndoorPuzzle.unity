@@ -3398,7 +3398,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[20].dialog.Array.data[1].sentences
-      value: "Oh\u2026right, we cant exactly leave without that\u2026"
+      value: "\uC544\u2026 \uB9DE\uB2E4, \uADF8\uAC78 \uC5C6\uC774 \uADF8\uB0E5 \uAC08
+        \uC218\uB294 \uC5C6\uC9C0\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[21].dialog.Array.data[0].sentences

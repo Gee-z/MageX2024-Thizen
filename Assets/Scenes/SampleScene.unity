@@ -18188,7 +18188,7 @@ PrefabInstance:
       objectReference: {fileID: 2662073740024753111}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.size
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.size
@@ -18550,19 +18550,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[0].sentences
-      value: "Thanks the stars! And thank you to both of you! I don\u2019t know what
-        would happen if you guys aren\u2019t here. I\u2019ve actually been stuck
-        here for quite a while."
+      value: "\uBCC4\uB4E4\uC5D0\uAC8C \uAC10\uC0AC\uD574\uC694! \uADF8\uB9AC\uACE0
+        \uB450 \uBD84 \uBAA8\uB450\uC5D0\uAC8C \uAC10\uC0AC\uB4DC\uB9BD\uB2C8\uB2E4!
+        \uB9CC\uC57D \uB450 \uBD84\uC774 \uC5EC\uAE30 \uACC4\uC2DC\uC9C0 \uC54A\uC558\uB2E4\uBA74
+        \uC5B4\uB5BB\uAC8C \uB418\uC5C8\uC744\uC9C0 \uBAA8\uB974\uACA0\uC5B4\uC694.
+        \uC0AC\uC2E4 \uC800\uB294 \uC5EC\uAE30\uC5D0\uC11C \uAF64 \uC624\uB7AB\uB3D9\uC548
+        \uAC07\uD600 \uC788\uC5C8\uC5B4\uC694."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[1].sentences
-      value: Our pleasure, Alex! Glad to be able to help. What were you looking for
-        from the scraps in the first place?
+      value: "\uC54C\uB809\uC2A4, \uC800\uD76C\uB3C4 \uAE30\uC069\uB2C8\uB2E4! \uB3C4\uC6C0\uC744
+        \uB4DC\uB9B4 \uC218 \uC788\uC5B4\uC11C \uAE30\uC069\uB2C8\uB2E4. \uCC98\uC74C\uBD80\uD130
+        \uADF8 \uC870\uAC01\uB4E4\uC5D0\uC11C \uBB34\uC5C7\uC744 \uCC3E\uACE0 \uACC4\uC168\uB098\uC694?"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[2].sentences
-      value: "Oh that\u2019s right! Now that you reminded me, where is that pesky
-        core?"
+      value: "\uC544, \uB9DE\uB2E4! \uB2F9\uC2E0\uC774 \uC0C1\uAE30\uC2DC\uCF1C\uC8FC\uC154\uC11C
+        \uC0DD\uAC01\uB0AC\uB294\uB370, \uADF8 \uC131\uAC00\uC2E0 \uCF54\uC5B4\uB294
+        \uC5B4\uB514\uC5D0 \uC788\uC8E0?"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[3].sentences
@@ -18570,44 +18575,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[4].sentences
-      value: "There! This is what I\u2019ve been looking for."
+      value: "\uBC14\uB85C \uC774\uAC70\uC608\uC694! \uC81C\uAC00 \uCC3E\uB358 \uBC14\uB85C
+        \uADF8\uAC70\uC608\uC694."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[5].sentences
-      value: "Oh, that\u2019s an\u2026 energy core\u2026 Say Alex, do you have another
-        one? We actually need it too."
+      value: "\uC544, \uADF8\uAC8C\u2026 \uC5D0\uB108\uC9C0 \uCF54\uC5B4\u2026 \uC54C\uB809\uC2A4,
+        \uB2E4\uB978 \uAC83\uB3C4 \uC788\uB2C8? \uC6B0\uB9AC\uB3C4 \uADF8\uAC8C \uD544\uC694\uD558\uAC70\uB4E0."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[6].sentences
-      value: "Aw shucks, this is the only one I\u2019ve found, in this planet at
-        least\u2026."
+      value: "\uC544, \uC774\uAC70\uBC16\uC5D0 \uBABB \uCC3E\uC558\uB124\uC694. \uC801\uC5B4\uB3C4
+        \uC774 \uD589\uC131\uC5D0\uC11C\uB294\uC694\u2026."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[7].sentences
-      value: "Ah, that\u2019s too bad\u2026 I guess we got to look around more, Aria"
+      value: "\uC544, \uC815\uB9D0 \uC544\uC27D\uB124\uC694\u2026 \uC544\uB9C8\uB3C4
+        \uB354 \uB9CE\uC774 \uB458\uB7EC\uBD10\uC57C\uACA0\uB124\uC694, \uC544\uB9AC\uC544."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[8].sentences
-      value: "You know, you guys should take it. I would\u2019ve never gotten out
-        without your help anyway."
+      value: "\uC54C\uB2E4\uC2DC\uD53C, \uB108\uD76C\uB4E4\uC774 \uAC00\uC838\uAC00\uC57C
+        \uD574. \uB108\uD76C\uC758 \uB3C4\uC6C0 \uC5C6\uC774\uB294 \uC808\uB300 \uBE60\uC838\uB098\uC62C
+        \uC218 \uC5C6\uC5C8\uC744 \uAC70\uC57C."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[9].sentences
-      value: "Are you sure? Haven\u2019t you been looking for it? We would feel bad
-        to just take it from you like that."
+      value: "\uC815\uB9D0\uC774\uC5D0\uC694? \uADF8\uAC78 \uCC3E\uACE0 \uACC4\uC168\uB358
+        \uAC70 \uC544\uB2C8\uC5D0\uC694? \uADF8\uB807\uAC8C \uADF8\uB0E5 \uAC00\uC838\uAC00\uB294
+        \uAC74 \uC800\uD76C\uB3C4 \uB9C8\uC74C\uC774 \uD3B8\uD558\uC9C0 \uC54A\uC744
+        \uAC83 \uAC19\uC544\uC694."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[0].sentences
-      value: "Well then, here goes nothing\u2026"
+      value: "\uADF8\uB7FC, \uC2DC\uC791\uD574 \uBCFC\uAE4C\uC694\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[1].sentences
-      value: ' O home sweet home, here i come!'
+      value: " \uC624, \uC0AC\uB791\uD558\uB294 \uC9D1\uC73C\uB85C \uB3CC\uC544\uC654\uC5B4\uC694!"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[2].sentences
-      value: "Oh that\u2019s right! Now that you reminded me, where is that pesky
-        core?"
+      value: "\uC544, \uB9DE\uB2E4! \uB2F9\uC2E0\uC774 \uC0C1\uAE30\uC2DC\uCF1C\uC8FC\uC154\uC11C
+        \uC0DD\uAC01\uB0AC\uB294\uB370, \uADF8 \uC131\uAC00\uC2E0 \uCF54\uC5B4\uB294
+        \uC5B4\uB514\uC5D0 \uC788\uC8E0?"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[3].sentences
@@ -18615,79 +18626,96 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[4].sentences
-      value: "There! This is what I\u2019ve been looking for."
+      value: "\uBC14\uB85C \uC774\uAC70\uC608\uC694! \uC81C\uAC00 \uCC3E\uB358 \uBC14\uB85C
+        \uADF8\uAC70\uC608\uC694."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[5].sentences
-      value: "Oh, that\u2019s an\u2026 energy core\u2026 Say Alex, do you have another
-        one? We actually need it too."
+      value: "\uC544, \uADF8\uAC8C\u2026 \uC5D0\uB108\uC9C0 \uCF54\uC5B4\u2026 \uC54C\uB809\uC2A4,
+        \uB2E4\uB978 \uAC83\uB3C4 \uC788\uB2C8? \uC6B0\uB9AC\uB3C4 \uADF8\uAC8C \uD544\uC694\uD558\uAC70\uB4E0."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[6].sentences
-      value: "Aw shucks, this is the only one I\u2019ve found, in this planet at
-        least\u2026."
+      value: "\uC544, \uC774\uAC70\uBC16\uC5D0 \uBABB \uCC3E\uC558\uB124\uC694. \uC801\uC5B4\uB3C4
+        \uC774 \uD589\uC131\uC5D0\uC11C\uB294\uC694\u2026."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[7].sentences
-      value: "Ah, that\u2019s too bad\u2026 I guess we got to look around more, Aria"
+      value: "\uC544, \uC815\uB9D0 \uC544\uC27D\uB124\uC694\u2026 \uC544\uB9C8\uB3C4
+        \uB354 \uB9CE\uC774 \uB458\uB7EC\uBD10\uC57C\uACA0\uB124\uC694, \uC544\uB9AC\uC544."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[8].sentences
-      value: "You know, you guys should take it. I would\u2019ve never gotten out
-        without your help anyway."
+      value: "\uC54C\uB2E4\uC2DC\uD53C, \uB108\uD76C\uB4E4\uC774 \uAC00\uC838\uAC00\uC57C
+        \uD574. \uB108\uD76C\uC758 \uB3C4\uC6C0 \uC5C6\uC774\uB294 \uC808\uB300 \uBE60\uC838\uB098\uC62C
+        \uC218 \uC5C6\uC5C8\uC744 \uAC70\uC57C."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[9].sentences
-      value: "Are you sure? Haven\u2019t you been looking for it? We would feel bad
-        to just take it from you like that."
+      value: "\uC815\uB9D0\uC774\uC5D0\uC694? \uADF8\uAC78 \uCC3E\uACE0 \uACC4\uC168\uB358
+        \uAC70 \uC544\uB2C8\uC5D0\uC694? \uADF8\uB807\uAC8C \uADF8\uB0E5 \uAC00\uC838\uAC00\uB294
+        \uAC74 \uC800\uD76C\uB3C4 \uB9C8\uC74C\uC774 \uD3B8\uD558\uC9C0 \uC54A\uC744
+        \uAC83 \uAC19\uC544\uC694."
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[10].sentences
-      value: "Well, It\u2019s okay. What were you guys planning to do with it in
-        the first place?"
+      value: "\uC74C, \uAD1C\uCC2E\uC544\uC694. \uCC98\uC74C\uBD80\uD130 \uADF8\uAC78\uB85C
+        \uBB58 \uD558\uB824\uACE0 \uD588\uC5B4\uC694?"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[11].sentences
-      value: We need it to power our teleporter device. You see, we are on a mission
-        to explore and help rebuild star system!
+      value: "\uC6B0\uB9AC\uB294 \uC774 \uC7A5\uCE58\uB97C \uD154\uB808\uD3EC\uD130
+        \uC7A5\uCE58\uC5D0 \uC804\uB825\uC744 \uACF5\uAE09\uD558\uAE30 \uC704\uD574
+        \uD544\uC694\uD569\uB2C8\uB2E4. \uBCF4\uC2DC\uB2E4\uC2DC\uD53C, \uC6B0\uB9AC\uB294
+        \uBCC4\uACC4 \uC2DC\uC2A4\uD15C\uC744 \uD0D0\uD5D8\uD558\uACE0 \uC7AC\uAC74\uD558\uB294
+        \uC784\uBB34\uB97C \uC218\uD589 \uC911\uC785\uB2C8\uB2E4!"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[12].sentences
-      value: Oh my! The stars aligned! I was going to look for a teleporter to send
-        me back home after this!
+      value: "\uC640\uC544! \uC815\uB9D0 \uC6B4\uC774 \uC88B\uB124\uC694! \uC774
+        \uC77C\uC744 \uB9C8\uCE58\uACE0 \uB098\uC11C \uC9D1\uC73C\uB85C \uB3CC\uC544\uAC00\uAE30
+        \uC704\uD574 \uD154\uB808\uD3EC\uD130\uB97C \uCC3E\uC544\uBCFC \uC0DD\uAC01\uC774\uC5C8\uC5B4\uC694!"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[13].sentences
-      value: "Let\u2019s cut a deal. I\u2019ll give you the energy core and you guys
-        can pay me back by helping me get home? How\u2019s that?"
+      value: "\uAC70\uB798\uB97C \uD558\uC8E0. \uC5D0\uB108\uC9C0 \uCF54\uC5B4\uB97C
+        \uB4DC\uB9B4 \uD14C\uB2C8, \uB300\uC2E0 \uC800\uB97C \uC9D1\uC73C\uB85C \uB3CC\uC544\uAC00\uAC8C
+        \uB3C4\uC640\uC8FC\uC2DC\uB294 \uAC78\uB85C \uAC1A\uC544\uC8FC\uC2DC\uACA0\uC5B4\uC694?
+        \uC5B4\uB54C\uC694?"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[14].sentences
-      value: "Two birds with one stone then, it\u2019s a deal!"
+      value: "\uC77C\uC11D\uC774\uC870\uB124\uC694, \uADF8\uB7FC \uAC70\uB798 \uC131\uC0AC!"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[10].sentences
-      value: "Well, It\u2019s okay. What were you guys planning to do with it in
-        the first place?"
+      value: "\uC74C, \uAD1C\uCC2E\uC544\uC694. \uCC98\uC74C\uBD80\uD130 \uADF8\uAC78\uB85C
+        \uBB58 \uD558\uB824\uACE0 \uD588\uC5B4\uC694?"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[11].sentences
-      value: We need it to power our teleporter device. You see, we are on a mission
-        to explore and help rebuild star system!
+      value: "\uC6B0\uB9AC\uB294 \uC774 \uC7A5\uCE58\uB97C \uD154\uB808\uD3EC\uD130
+        \uC7A5\uCE58\uC5D0 \uC804\uB825\uC744 \uACF5\uAE09\uD558\uAE30 \uC704\uD574
+        \uD544\uC694\uD569\uB2C8\uB2E4. \uBCF4\uC2DC\uB2E4\uC2DC\uD53C, \uC6B0\uB9AC\uB294
+        \uBCC4\uACC4 \uC2DC\uC2A4\uD15C\uC744 \uD0D0\uD5D8\uD558\uACE0 \uC7AC\uAC74\uD558\uB294
+        \uC784\uBB34\uB97C \uC218\uD589 \uC911\uC785\uB2C8\uB2E4!"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[12].sentences
-      value: Oh my! The stars aligned! I was going to look for a teleporter to send
-        me back home after this!
+      value: "\uC640\uC544! \uC815\uB9D0 \uC6B4\uC774 \uC88B\uB124\uC694! \uC774
+        \uC77C\uC744 \uB9C8\uCE58\uACE0 \uB098\uC11C \uC9D1\uC73C\uB85C \uB3CC\uC544\uAC00\uAE30
+        \uC704\uD574 \uD154\uB808\uD3EC\uD130\uB97C \uCC3E\uC544\uBCFC \uC0DD\uAC01\uC774\uC5C8\uC5B4\uC694!"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[13].sentences
-      value: "Let\u2019s cut a deal. I\u2019ll give you the energy core and you guys
-        can pay me back by helping me get home? How\u2019s that?"
+      value: "\uAC70\uB798\uB97C \uD558\uC8E0. \uC5D0\uB108\uC9C0 \uCF54\uC5B4\uB97C
+        \uB4DC\uB9B4 \uD14C\uB2C8, \uB300\uC2E0 \uC800\uB97C \uC9D1\uC73C\uB85C \uB3CC\uC544\uAC00\uAC8C
+        \uB3C4\uC640\uC8FC\uC2DC\uB294 \uAC78\uB85C \uAC1A\uC544\uC8FC\uC2DC\uACA0\uC5B4\uC694?
+        \uC5B4\uB54C\uC694?"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[9].dialog.Array.data[14].sentences
-      value: "Two birds with one stone then, it\u2019s a deal!"
+      value: "\uC77C\uC11D\uC774\uC870\uB124\uC694, \uADF8\uB7FC \uAC70\uB798 \uC131\uC0AC!"
       objectReference: {fileID: 0}
     - target: {fileID: 4380723831447085309, guid: 57cd42fe988dd7e4f8a91c80aa31f67b, type: 3}
       propertyPath: DialogueArray.Array.data[8].dialog.Array.data[0].SpriteIndex
